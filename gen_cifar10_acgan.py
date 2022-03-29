@@ -35,7 +35,7 @@ if not os.path.exists(save_path):
 
 
 def main():
-    noise = torch.FloatTensor(args.batchsize, args.nz, 1, 1)
+    noise = torch.FloatTensor(args.batchsize, args.nz)
     noise = noise.cuda()
     noise = Variable(noise)
     labels = torch.arange(0, 10, dtype=torch.long, device=device)
